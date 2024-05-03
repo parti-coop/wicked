@@ -32,7 +32,7 @@ module Wicked::Controller::Concerns::Path
                 :id         => goto_step || params[:id],
                 :only_path  => true
                }.merge options
-    url_for(options)
+    Boostlocal::Engine::url_for(options)
   end
 
   def wizard_url(goto_step = nil, options = {})
